@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2021-09-21T19:52:00.970Z
+
+While resolving: client@0.1.0
+Found: react@17.0.2
+node_modules/react
+  react@"^17.0.2" from the root project
+
+Could not resolve dependency:
+peer react@"^0.14.9 || ^15.3.0 || ^16.0.0" from react-quill@1.3.5
+node_modules/react-quill
+  react-quill@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "react",
+    "version": "17.0.2",
+    "whileInstalling": {
+      "name": "client",
+      "version": "0.1.0",
+      "path": "D:\\Important files\\AVO Projects\\client"
+    },
+    "location": "node_modules/react",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "react",
+        "spec": "^17.0.2",
+        "from": {
+          "location": "D:\\Important files\\AVO Projects\\client"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "prod",
+    "name": "react",
+    "spec": "^17.0.2",
+    "from": {
+      "location": "D:\\Important files\\AVO Projects\\client"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "react",
+    "spec": "^0.14.9 || ^15.3.0 || ^16.0.0",
+    "error": "INVALID",
+    "from": {
+      "name": "react-quill",
+      "version": "1.3.5",
+      "whileInstalling": {
+        "name": "client",
+        "version": "0.1.0",
+        "path": "D:\\Important files\\AVO Projects\\client"
+      },
+      "location": "node_modules/react-quill",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "react-quill",
+          "spec": "*",
+          "from": {
+            "location": "D:\\Important files\\AVO Projects\\client"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}
