@@ -37,8 +37,9 @@ export const createAction = (postState) => {
                 dispatch({type: REDIRECT_TRUE});
                 dispatch({type: REMOVE_ERRORS})
                 dispatch({type: SET_MESSAGE, payload: msg});
-                dispatch({type: REDIRECT_FALSE});
                 dispatch({type: REMOVE_MESSAGE})
+                dispatch({type: REDIRECT_FALSE});
+                
              } catch (error) {
                  console.log(error.response)
                  const {errors} = error.response.data;
